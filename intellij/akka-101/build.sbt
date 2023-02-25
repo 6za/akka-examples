@@ -15,11 +15,12 @@ mainClass in Compile := Some("AkkaHttpServer1")
 
 val akkaVersion = "2.6.5"
 val akkaHttpVersion = "10.1.12"
+fork in run := true
 
 libraryDependencies ++= Seq(
   // akka streams
   "com.typesafe.akka" %% "akka-stream" % akkaVersion,
   "com.typesafe.akka" %% "akka-actor-typed" % akkaVersion,
-  "com.typesafe.akka" %% "akka-http" % akkaHttpVersion
-
+  "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
+  "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion
 )

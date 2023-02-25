@@ -39,3 +39,13 @@ To test the AkkHTTPServer:
 ```bash 
  curl http://localhost:9090
 ```
+
+```bash 
+sbt "runMain api.MySimpleAPI"
+curl http://localhost:9090
+``` 
+
+```bash
+sbt "runMain api.PostAPI"
+curl http://localhost:9090/test -X POST  -H "Content-Type: application/json"  -d '{"userId":"hhgtg","offer":42}'
+```
